@@ -1,15 +1,6 @@
-from django.http import HttpResponse
+from django.shortcuts import render
+from django.template import loader
+
 
 def index(request):
-    html = '''
-    <!DOCTYPE html>
-    <html>
-    <head>
-      <title>Стартовая</title>
-    </head>
-    <body>
-      <h1>Здесь будет карта</h1>
-    </body>
-    </html>
-    '''
-    return HttpResponse(html)
+    return render(request, 'index.html')
